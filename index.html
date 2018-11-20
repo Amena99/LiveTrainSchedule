@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trains Schedules</title>
+    <!----Bootstrap Reference Link------>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+    <!------Firebase Reference---------->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+<body>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- LINK TO FIREBASE GOES HERE -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+<!-- Train Data Display Table -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="jumbotron" style="background-color:cornflowerblue" width="80%" height="20px">
+                    <h2 class="display-4" style="text-align: center; color: azure">Train Arrival Schedule</h2>
+                    <p class="lead" ><h4 style="text-align: center; color: azure">Up-to-Date Information on Arrivals in Your Area</h4></p>
+                </div>
+            </div>
+            <div class="col-md-1"></div>    
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header" style="background-color:cornflowerblue; color:azure;"><h4>Current Train Times</h4>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>                      
+                            </tr>
+                        </thead>
+                    <tbody id="tablebody"></tbody>
+                    </table>
+                </div>
+            </div>
+        <div class="col-md-1"></div>
+        </div>     
+   
+<!-- Train Data Input Form -->
+    <div class="row">      
+       
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="card" style="width: 100%;">
+                <div class="card-header" style="background-color:cornflowerblue; color: azure;">
+                    <h4>Add Train</h4>
+                </div>
+            </div>
+            <form>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="name-input">Train Name:</label>
+                             <input class="form-control" id="name-input" type="text">
+                       </div>
+                    </form>
+                    <form role="form">
+                       <div class="form-group">
+                            <label for="destination-input">Destination: </label>
+                            <input class="form-control" id="destination-input" type="text">
+                        </div>            
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="firsttime-input">First Train Time (HH:mm-military time): </label>
+                            <input class="form-control" id="firsttime-input" type="time">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="frequency-input">Frequency (min): </label>
+                            <input class="form-control" id="frequency-input" type="text">  
+                        </div>                             
+                    </form>
+                <div style="align-self: right">
+                    <button type="submit" class="btn btn-primary" id="submit" >Submit</button>
+                </div>
+            </div>
+            </div>
+        <div class="col-md-1"></div>
+
+    </div>
+
+<!-- Link to JS File -->
+<script type="text/javascript" src="JS/app.js"></script>
+</body>
+</html>
