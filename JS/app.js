@@ -62,7 +62,7 @@ function calculateRender(snapshot){
     var newrow = $("#tablebody").append(row);
     row.append(("<td>" + trainInfo.trainname+ "</td>"));
     row.append(("<td>" + trainInfo.destination+ "</td>"));
-    row.append(("<td>" + trainInfo.frequency+ "</td>"));
+    row.append(("<td>" + trainInfo.frequency+ " min" + "</td>"));
     row.append(("<td>" + nextArrival+ "</td>"));
     row.append(("<td>" + minutesTill+ "</td>"));
 };
@@ -118,7 +118,7 @@ function updateRender() {
             
             row.append(("<td>" + trainInfo.trainname+ "</td>"));
             row.append(("<td>" + trainInfo.destination+ "</td>"));
-            row.append(("<td>" + trainInfo.frequency+ "min"+ "</td>"));
+            row.append(("<td>" + trainInfo.frequency+ " min"+ "</td>"));
             row.append(("<td>" + nextArrival+ "</td>"));
             row.append(("<td>" + minutesTill+ "</td>"));
        });
